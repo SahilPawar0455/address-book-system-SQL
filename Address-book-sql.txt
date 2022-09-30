@@ -98,3 +98,23 @@ mysql> select * from address_Book_Table;
 | omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
 +------------+-----------+---------+---------+-------+--------+--------------+-----------------+
 2 rows in set (0.00 sec)
+
+UC6:  Ability to Retrieve Person belonging to a City or State from the Address Book
+
+mysql> select * from address_Book_Table where City ='chiplun';
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| First_Name | Last_Name | Address | City    | State | Zip    | Phone_number | email           |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| sahil      | Pawar     | pophali | chiplun | MH    | 415601 |           91 | sahil@gmail.com |
+| omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from address_Book_Table where state ='Mh';
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| First_Name | Last_Name | Address | City    | State | Zip    | Phone_number | email           |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| sahil      | Pawar     | pophali | chiplun | MH    | 415601 |           91 | sahil@gmail.com |
+| omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+2 rows in set (0.00 sec)
