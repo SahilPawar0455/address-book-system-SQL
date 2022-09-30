@@ -22,3 +22,31 @@ mysql> show databases;
 +--------------------+
 9 rows in set (0.00 sec)
 
+UC2:  Ability to create a address book Table
+
+mysql> create table address_Book_Table(
+    -> First_Name varchar(30) not null,
+    -> Last_Name varchar(30) not null,
+    -> Address varchar(30) not null,
+    -> City varchar(30) not null,
+    -> State varchar(30) not null,
+    -> Zip int not null,
+    -> Phone_number int not null,
+    -> email varchar(30) not null);
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> describe address_Book_Table;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| First_Name   | varchar(30) | NO   |     | NULL    |       |
+| Last_Name    | varchar(30) | NO   |     | NULL    |       |
+| Address      | varchar(30) | NO   |     | NULL    |       |
+| City         | varchar(30) | NO   |     | NULL    |       |
+| State        | varchar(30) | NO   |     | NULL    |       |
+| Zip          | int         | NO   |     | NULL    |       |
+| Phone_number | int         | NO   |     | NULL    |       |
+| email        | varchar(30) | NO   |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+8 rows in set (0.04 sec)
+
