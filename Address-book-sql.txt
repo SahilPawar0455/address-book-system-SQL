@@ -176,3 +176,23 @@ mysql> select * from address_Book_Table;
 | omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com | ab                | friend       |
 +------------+-----------+---------+---------+-------+--------+--------------+-----------------+-------------------+--------------+
 2 rows in set (0.00 sec)
+
+
+UC10: Ability to get number of contact persons i.e count by type
+
+
+mysql> select count(Contact_Type) from address_Book_Table where Contact_Type='family';
++---------------------+
+| count(Contact_Type) |
++---------------------+
+|                   1 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(Contact_Type) from address_Book_Table where Contact_Type='friend';
++---------------------+
+| count(Contact_Type) |
++---------------------+
+|                   1 |
++---------------------+
+1 row in set (0.00 sec)
