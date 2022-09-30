@@ -50,3 +50,21 @@ mysql> describe address_Book_Table;
 +--------------+-------------+------+-----+---------+-------+
 8 rows in set (0.04 sec)
 
+UC3:   Ability to insert new Contacts to Address Book
+
+mysql> insert into address_Book_Table(First_Name,Last_Name,Address,City,State,Zip,Phone_number,email)values
+    -> ('sai','Pawar','pophali','chiplun','MH','415601','91','sahil@gmail.com'),
+    -> ('pavan','pawar','alor','chiplun','mh','415603','96','pavan@Gmail.com'),
+    -> ('omkar','sagvekar','chi','chiplun','mh','415612','99','Omkar@gmail.com');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from address_Book_Table;
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| First_Name | Last_Name | Address | City    | State | Zip    | Phone_number | email           |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| sai        | Pawar     | pophali | chiplun | MH    | 415601 |           91 | sahil@gmail.com |
+| pavan      | pawar     | alor    | chiplun | mh    | 415603 |           96 | pavan@Gmail.com |
+| omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+3 rows in set (0.00 sec)
