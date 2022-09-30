@@ -118,3 +118,22 @@ mysql> select * from address_Book_Table where state ='Mh';
 | omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
 +------------+-----------+---------+---------+-------+--------+--------------+-----------------+
 2 rows in set (0.00 sec)
+
+
+UC7:  Ability to understand the size of address book by City and State
+
+mysql> select count(city) from address_Book_Table;
++-------------+
+| count(city) |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select count(state) from address_Book_Table;
++--------------+
+| count(state) |
++--------------+
+|            2 |
++--------------+
+1 row in set (0.00 sec)
