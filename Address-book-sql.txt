@@ -1,1 +1,24 @@
 "Welcome to Address Book System Database"
+
+
+UC1:  create a address Book Service database
+
+mysql> create database address_book;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| address_book       |
+| amazon             |
+| information_schema |
+| mysql              |
+| payroll_service    |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+9 rows in set (0.00 sec)
+
