@@ -148,3 +148,31 @@ mysql> select * from address_Book_Table order by First_Name;
 | sahil      | Pawar     | pophali | chiplun | MH    | 415601 |           91 | sahil@gmail.com |
 +------------+-----------+---------+---------+-------+--------+--------------+-----------------+
 2 rows in set (0.00 sec)
+
+UC9:  Ability to identify each Address Book with name and Type.
+
+mysql> Alter Table address_Book_Table add Address_Book_Name VARCHAR(30) NOT NULL;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> Alter Table address_Book_Table add Contact_type VARCHAR(30) NOT NULL;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+mysql> update address_Book_Table set Address_Book_Name = 'ab',Contact_Type='family' where First_Name='sahil';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update address_Book_Table set Address_Book_Name = 'ab',Contact_Type='friend' where First_Name='omkar';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from address_Book_Table;
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+-------------------+--------------+
+| First_Name | Last_Name | Address | City    | State | Zip    | Phone_number | email           | Address_Book_Name | Contact_Type |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+-------------------+--------------+
+| sahil      | Pawar     | pophali | chiplun | MH    | 415601 |           91 | sahil@gmail.com | ab                | family       |
+| omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com | ab                | friend       |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+-------------------+--------------+
+2 rows in set (0.00 sec)
