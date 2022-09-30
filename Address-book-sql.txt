@@ -84,3 +84,17 @@ mysql> select * from address_Book_Table;
 | omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
 +------------+-----------+---------+---------+-------+--------+--------------+-----------------+
 3 rows in set (0.00 sec)
+
+UC5:  Ability to delete a person using person's name
+
+mysql> delete from address_Book_Table where Address ='alor';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from address_Book_Table;
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| First_Name | Last_Name | Address | City    | State | Zip    | Phone_number | email           |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| sahil      | Pawar     | pophali | chiplun | MH    | 415601 |           91 | sahil@gmail.com |
+| omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+2 rows in set (0.00 sec)
