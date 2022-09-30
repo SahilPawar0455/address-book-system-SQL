@@ -68,3 +68,19 @@ mysql> select * from address_Book_Table;
 | omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
 +------------+-----------+---------+---------+-------+--------+--------------+-----------------+
 3 rows in set (0.00 sec)
+
+UC4:  Ability to edit existing contact person using their name
+
+mysql> update address_Book_Table set First_Name = 'sahil' where Last_Name = 'Pawar';
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from address_Book_Table;
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| First_Name | Last_Name | Address | City    | State | Zip    | Phone_number | email           |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+| sahil      | Pawar     | pophali | chiplun | MH    | 415601 |           91 | sahil@gmail.com |
+| sahil      | pawar     | alor    | chiplun | mh    | 415603 |           96 | pavan@Gmail.com |
+| omkar      | sagvekar  | chi     | chiplun | mh    | 415612 |           99 | Omkar@gmail.com |
++------------+-----------+---------+---------+-------+--------+--------------+-----------------+
+3 rows in set (0.00 sec)
